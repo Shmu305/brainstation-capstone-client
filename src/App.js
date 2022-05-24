@@ -1,9 +1,11 @@
 import { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "../src/pages/Home/Home";
-// import Dashboard from "./pages/Dashboard/Dashboard";
-// import Login from "./pages/Login/Login";
-// import Signup from "./pages/Signup/Signup";
+import Mangos from "./pages/Mongos/Mangos";
+import ItemDetail from "./pages/ItemDetail/ItemDetail";
+import LoginPage from "./pages/LoginPage/LoginPage";
+import CreateListing from "./pages/CreateListingPage/CreateListing";
+import EditListing from "./pages/EditListingPage/EditListing";
 
 function App() {
    return (
@@ -13,12 +15,21 @@ function App() {
                   <Route path="/" exact>
                       <Home />
                   </Route>
-                  {/* <Route path="/login">
-                      <Login />
+                  <Route path='/signin'>
+                    <LoginPage/>
                   </Route>
-                  <Route path="/signup">
-                      <Signup />
-                  </Route> */}
+                  <Route path="/mangos">
+                      <Mangos/>
+                  </Route>
+                  <Route path="/listing/:id">
+                      <ItemDetail/>
+                  </Route>
+                  <Route path="/createlisting">
+                      <CreateListing/>
+                  </Route>
+                  <Route path="/editlisting">
+                      <EditListing/>
+                  </Route>
               </Switch>
           </BrowserRouter>
       </div>
