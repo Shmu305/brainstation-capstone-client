@@ -1,0 +1,35 @@
+.listingPage{
+    background-image: url("../../assets/detailsPageBackground.jpg");
+    height: 100vh;
+}
+
+.listing{
+    display: flex;
+    justify-content: center;
+    color: white;
+
+    &__image{
+        border-radius: .5rem;
+    }
+
+    &__button{
+        padding: 1rem;
+        margin: 1rem;
+        color: white;
+        font-size: large;
+        background-color: lightcoral;
+        border: 4px solid white;
+        border-radius: .5rem;
+    }
+
+    &__input{
+        padding: 1rem;
+        font-size: large;
+        border: 4px solid lightgrey;
+        border-radius: 8px;
+    }
+
+}
+#upload-photo{
+    font-size: large;
+}

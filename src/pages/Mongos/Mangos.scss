@@ -1,6 +1,24 @@
-.grid{
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 2%;
-    column-gap: 2%;
+.mangoPage{
+    background-image: url('../../assets/detailsPageBackground.jpg');
+    height: 100vh;
+ 
+    &__logo{
+        height: 4rem;
+        width: 4rem;
+        margin-bottom: 1rem;
+        border-radius: 1rem;
+        margin-top: 1.5rem;
+        margin-left: 1.5rem;
+    }
+
+    &__grid{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 5vh;
+        column-gap: 3vw;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+    }
 }

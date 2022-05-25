@@ -1,3 +1,7 @@
+import logo from '../../assets/takes2.png';
+import background from '../../assets/mangoBackground.jpg';
+import video from '../../assets/video.mp4';
+import './ItemDetail.scss';
 import React, { useState, useEffect} from 'react';
 import {useParams, Link} from 'react-router-dom';
 import axios from 'axios';
@@ -45,32 +49,42 @@ function ItemDetail(){
     return(
         <div className="details">
         
-            {currentItem?
-            <>  
-                <Link to='/'>home</Link>
-                <h1>{currentItem.seller}</h1>
-                <h1>{currentItem.product}</h1>
-                {editClicked ?
-                <form id="form1" onSubmit={onEditHandler}>
-                    <input type="email" placeholder="email" name="email"></input>
-                </form>
-                :<h1>{currentItem.email}</h1>}
-                <img src={currentItem.image} alt="image"/>
+            {currentItem?<>
+            <Link to='/'><img className="mangoPage__logo" src={logo} alt="logo"/></Link>
+            <section className='detailPage'>  
+                <div className='detailPage__info'>
+                        <h1 className='detailPage__info--text'>Species: {currentItem.product}</h1>
+                        <div className='detailPage__info--contact'>
+                            <p className='detailPage__info--subText'>Location: {currentItem.itemLocation}</p>
+                            <p className='detailPage__info--subText'>Contact: {currentItem.seller}</p>
+                            {editClicked ?
+                            <form id="detailPage__form1" onSubmit={onEditHandler}>
+                                <input className='detailPage__form1--input' type="email" placeholder="Email" name="email"></input>
+                            </form>
+                            :<p className='detailPage__info--subText'>Email: {currentItem.email}</p>}
+                        </div>
+                </div>
+                <img className='detailPage__image' src={currentItem.image} alt="image"/>
+
                 {currentItem.sellerId == sessionStorage['id']?
-                    <div>
+                    <div className='detailPage__options'>
                         {editClicked? 
-                        <button onClick={onEditClick}>cancel changes</button>
-                        :<button onClick={onEditClick}>edit listing</button>
+                        <button className="detailPage__options--button" onClick={onEditClick}>Cancel Changes</button>
+                        :<button className="detailPage__options--button" onClick={onEditClick}>Edit Listing</button>
                         }
-                        <button onClick={onDeleteHandler}>delete item</button>
+                        <button className="detailPage__options--button" onClick={onDeleteHandler}>Delete Item</button>
                         {editClicked?
-                        <button form="form1">save changes</button>
+                        <button className="detailPage__options--button" form="detailPage__form1">Save Changes</button>
                         :<div></div>}
                     </div>
                     : <div></div>
                 }
+                
+            </section>
             </>
-            :<p>loading...</p>}    
+            :<p>loading...</p>}
+            <video className="video" src={video} width="320" height="240" controls>
+                    </video>    
         </div>
 
 

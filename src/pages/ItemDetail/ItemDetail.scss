@@ -1,0 +1,87 @@
+.details{
+    background-image: url('../../assets/detailsPageBackground.jpg');
+    height: 100vh;
+}
+
+.detailPage{
+    display: flex;
+    justify-content: center;
+    
+    &__info{
+        margin-right: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        &--imageContainer{
+            position: relative;
+            overflow: hidden;
+        }
+
+        &--text{
+            font-size: 2.5rem;
+            background-color: aliceblue;
+            border-radius: 8px;
+            padding: 0.5rem;
+        }
+
+        &--subText{
+            font-size: 1.5rem;
+            background-color: aliceblue;
+            border-radius: .5rem;
+            padding: 1rem
+        }
+
+        &--contact{
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+    }
+
+    &__image{
+        height: 25rem;
+        width: 25rem;
+        object-fit: cover;
+        border-radius: .75rem;
+        border: .25rem solid orange;
+    }
+
+    &__form1{
+        &--input{
+            padding: 1rem;
+            border: .125rem solid lightgray;
+            border-radius: .5rem;
+            width: 100%;
+            font-size: 1rem;
+        }
+    }
+
+    &__options{
+        margin-left: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        &--button{
+            width: 15rem;
+            height: 3.75rem;
+            border: .125rem solid white;
+            color: white;
+            font-size: large;
+            border-radius: .5rem;
+            background-color: lightcoral;
+            margin-top: 1rem;
+        }
+    }
+}
+
+.video{
+    margin-left: 40%;
+    height: 13rem;
+    width: 24rem;
+    border: .25rem solid white;
+    border-radius: .5rem;
+    margin-top: 1rem;
+}

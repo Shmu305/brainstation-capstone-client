@@ -1,3 +1,5 @@
+import './Login.scss';
+import logo from '../../assets/takes2.png';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 function LoginPage(){
@@ -14,16 +16,14 @@ function LoginPage(){
                }else{
                    window.location = "/signin"
                }
-            })
-
+        })
     }
-
-
     return(
-        <form onSubmit={handleSubmit}>
-            <input type="text" placeholder="email" name="email" ></input>
-            <input type="password" placeholder="password" name="password"></input>
-            <button type="submit">sign in</button>
+        <form className="form" onSubmit={handleSubmit}>
+            <img onClick={event =>  window.location.href='/'} className="login__logo" src={logo} alt="logo"/>
+            <input className="form__input" type="text" placeholder="Email" name="email" ></input>
+            <input className="form__input" type="password" placeholder="Password" name="password"></input>
+            <button className="form__submit" type="submit">Sign In</button>
         </form>
     )
 }

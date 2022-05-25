@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import logo from '../../assets/takes2.png';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
 import ItemCard from '../../components/ItemCard/ItemCard';
@@ -17,11 +18,10 @@ function Mangos() {
       <div>
         {mangoSellers ?
         <section className='mangoPage'>
-            <Link to='/'>home</Link>
-            <h1>we have mangos</h1>
-            <ul className='grid'>
+            <Link to='/'><img className="mangoPage__logo" src={logo} alt="logo"/></Link>
+            <ul className='mangoPage__grid'>
             {mangoSellers.map((seller) => {
-                return <ItemCard key={seller.productId} id={seller.productId} name={seller.first} image={seller.productImg}/>
+                return <ItemCard key={seller.productId} id={seller.productId} image={seller.productImg} location={seller.itemLocation} type={seller.itemType}/>
                 })
             }
             </ul>
