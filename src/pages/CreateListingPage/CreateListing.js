@@ -32,11 +32,11 @@ function CreateListing () {
     <form onSubmit={submitHandler}>
       {selectedImage ?
         <div>
-            <img className='listing__image' alt="not found" width={"500px"} height={"350px"} src={URL.createObjectURL(selectedImage)} />
+            <img className='listing__image' alt="not found" width={"300px"} src={URL.createObjectURL(selectedImage)} />
             <br />
             <button className="listing__button" onClick={()=>setSelectedImage(null)}>Remove</button>
         </div>
-      :<img src={placeholder} width={"500px"} alt="placeholder"/>}
+      :<img src={placeholder} width={"300px"} alt="placeholder"/>}
       <br />
      
       <br /> 
