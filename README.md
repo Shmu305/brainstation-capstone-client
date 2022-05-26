@@ -1,7 +1,7 @@
 # Takes 2 to Mango : Front-End
 
 This is my capstone project for the BrainStation WebDev bootcamp. 
-The isnpiration behind it is that many many tree owners in South 
+The inspiration behind it is that many mango tree owners in South 
 Florida have excess fruit and it goes to waste. I wanted to build a platform where
 mango tree owners in South Florida can connect with people who are looking
 to acquire these excess mangos. 
@@ -27,12 +27,19 @@ Install dependencies
   npm install
 ```
 
-Start the server
+Start the server (seperate repo)
 
 ```bash
   npm run start
 ```
 
+## Notes
+
+to login a a registered user, use an already registered user. 
+you can use the following credentials:
+
+email: finlay@gizmodo.com
+password: finlay
 
 ## Tech Stack
 
