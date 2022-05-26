@@ -35,7 +35,7 @@ Start the server (seperate repo)
 
 ## Notes
 
-to login a a registered user, use an already registered user. 
+To login as a registered user, use an already registered user. 
 you can use the following credentials:
 
 email: finlay@gizmodo.com
